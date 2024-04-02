@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Holy Grail Layout</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="refreshPage()">Home</a></li>
+                <li><a href="#" onclick="refreshPage()">About</a></li>
+                <li><a href="#" onclick="refreshPage()">Services</a></li>
+                <li><a href="#" onclick="refreshPage()">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content-center">
+                <h2>Print Pyramid of Stars</h2>
+                <label for="height">Enter the height of the pyramid:</label>
+                <input type="number" id="height" min="1">
+                <button onclick="printPyramid()">Print Pyramid</button>
+                <div id="pyramid"></div>
+            </div>
+        </main>
+        <aside>
+            <a href="https://www.amazon.com/"><img src="https://m.media-amazon.com/images/I/41rPcyZJ3nL._AC_UL480_FMwebp_QL65_.jpg" alt="Advertisement"></a>
+        </aside>
+        <footer>
+            <p>Addendum: The problem solved by the JavaScript code is to print a pyramid of stars in the content area. The function `printPyramid` takes the height of the pyramid as input and generates the pyramid pattern using nested loops. It then appends the pattern to the HTML element with the ID "pyramid". No significant difficulties were encountered while implementing this functionality.</p>
+        </footer>
+    </div>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
